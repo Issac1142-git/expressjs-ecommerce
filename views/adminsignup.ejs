@@ -1,0 +1,33 @@
+<%- include('adminheader') -%>
+
+<section id="adminsignup">
+
+    <div class="container mt-5">
+        <div class="text-center">
+
+            <h1>Create a Free Account</h1>
+        </div>
+
+        <div style="margin: 25px auto; width: 40%;">
+
+            <form action="/seller/signup" method="POST">
+
+                <div class="form-group">
+                    <input type="text" placeholder="Seller Name" name="name" class="form-control">
+                </div>
+
+                <div class="form-group">
+                    <input type="email" placeholder="Seller E-mail" name="email" class="form-control">
+                </div>
+                <div class="form-group">
+                    <input type="password" placeholder="Password" name="password" class="form-control">
+                </div>
+                <div class="form-group">
+                    <button class="btn btn-primary form-control">Signup</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    </section>
+    <%- include('adminfooter') -%>

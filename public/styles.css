@@ -1,0 +1,159 @@
+*{
+    font-family: Montserrat;
+}
+
+body{
+    position: relative;
+    z-index: 1;
+    background: #D3CCE3;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #E9E4F0, #D3CCE3);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #E9E4F0, #D3CCE3); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+}
+
+/* admin login and signup route styles  */
+#adminlogin{
+    margin-top: 20vh;
+    margin-bottom: 15vh;
+}
+
+#adminsignup{
+    margin-top: 20vh;
+    margin-bottom: 15vh;
+}
+
+#adminlogin i{
+    font-size: 5rem;
+}
+
+/* customer login and signup route styles  */
+#login i{
+    font-size: 5rem;
+}
+
+#login{
+    margin-top: 10vh;
+    margin-bottom: 15vh;
+}
+
+#signup{
+    margin-top: 10vh;
+    margin-bottom: 15vh;
+}
+/* card styling */
+.card{
+    border: none;
+}
+.card-img-top {
+    width: 100%;
+    height: 30vh;
+    object-fit: cover;
+}    
+
+#addproduct{
+    margin-top: 20vh;
+    margin-bottom: 10vh;
+}
+
+#editproduct{
+    margin-top: 20vh;
+    margin-bottom: 10vh;
+}
+
+#adminshow{
+    margin-top: 20vh;
+    margin-bottom: 10vh;
+}
+
+#adminshow img{
+    height: 70vh;
+    object-fit: cover;
+}
+
+#deleteform{
+    display: inline;
+    margin-left: 1em;
+}
+
+/* my product route in admin dashboard */
+#myproduct{
+    margin-top: 15vh;
+    margin-bottom: 10vh;
+}
+
+#myproduct img{
+    height: 30vh;
+    object-fit: cover;
+}
+
+/* customer products card */
+#customerHome a{
+    font-size: 2.5vh;
+}
+
+#customerHome{
+    margin-bottom: 10vh;
+}
+
+#customershow{
+    margin-top: 10vh;
+    margin-bottom: 10vh;
+}
+
+#customershow img{
+    height: 70vh;
+    object-fit: cover;
+}
+
+
+/* navbar design */
+nav{
+    background: #D3CCE3;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #E9E4F0, #D3CCE3);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #E9E4F0, #D3CCE3); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+#adminHome .container{
+    margin-top: 10vh;
+    margin-bottom: 10vh;
+}
+
+#products{
+    margin-top: 5vh;
+    margin-bottom: 5vh;
+}
+
+footer{
+    position: relative;
+    z-index: 1;
+    font-weight: 700;
+    background: #D3CCE3;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #E9E4F0, #D3CCE3);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #E9E4F0, #D3CCE3); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+}
+
+#products a{
+    font-size: 2.4vh;
+}
+
+/*my cart */
+.cartImg{ 
+    height: 15vh;
+    width: 15vh;
+    object-fit: cover;
+}
+
+#mycart{
+    margin-top: 15vh;
+    margin-bottom: 15vh;
+}
+
+/* checkout page */
+#checkout{
+    
+    margin-top: 5em;
+    margin-bottom: 5em;
+}
+
+

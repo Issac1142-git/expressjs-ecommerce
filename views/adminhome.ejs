@@ -1,0 +1,31 @@
+<%- include('adminheader') -%>
+
+<section id="adminHome" class="my-5">
+
+<div class="container text-center">
+        <div class="row">
+            <% products.forEach(function(product){ %>
+            <div class="col-lg-3 col-md-4 col-sm-6">
+                <div class="card mb-4">
+                    <img src="<%= product.image %>" alt="" class="card-img-top img-fluid">
+                    <div class="card-body">
+                        <h3 class="card-title"><%= product.name %></h3>
+                        <h6 class="card-subtitle">RS <%= product.price %></h6>
+                        <p class="card-text"><%= product.description.substring(1, 50) %> <a href="/seller/product/<%= product._id %>">Read More</a></p>
+                        
+                    </div>
+                </div>
+           
+            </div>
+            <% }) %>
+        </div>
+    </div>
+</section>
+<%- include('adminfooter') -%>        
+                    
+                    
+            
+            
+
+
+ 

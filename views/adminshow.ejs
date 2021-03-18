@@ -1,0 +1,30 @@
+<%- include("adminheader") -%>
+<section id="adminshow">
+<div class="container my-5">
+    <div class="row">
+        <div class="col-3">
+
+        </div>
+        <div class="col-9">
+            <div class="card">
+                <img src="<%= product.image %>" alt="" class="">
+                <div class="card-body">
+                    <h3 class="card-subtitle float-right">Rs<%= product.price %></h3>
+                    <h3 class="card-title"><%= product.name %></h3>
+                    <p class="card-text lead"><%= product.description %></p>
+                    <p><em>Posted by, </em>  <%= product.seller.username.charAt(0).toUpperCase() + product.seller.username.slice(1) %></p>
+                    <% if(currentAdmin && product.seller.id.equals(currentAdmin._id)){ %>
+                    <a href="/seller/product/<%= product._id %>/edit" class="btn btn-warning">Edit</a>
+                    <form  id="deleteform" action="/seller/product/<%= product._id %>/delete?_method=DELETE" method="POST">
+                    <button class="btn btn-danger">Delete</button>
+                    </form>
+                    <% } %>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</section>
+<%- include("adminfooter") -%>
+
+

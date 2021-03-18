@@ -1,0 +1,30 @@
+<%- include('header') -%>
+
+<section id="login">
+
+    <div class="container mt-5">
+        <div class="text-center">
+            <i class="fas fa-users"></i>
+            <h1>Login</h1>
+        </div>
+
+        <div style="margin: 25px auto; width: 40%;">
+            <form action="/customer/login" method="POST">
+
+                <div class="form-group">
+                    <input type="email" placeholder="User ID" name="email" class="form-control">
+                </div>
+                <div class="form-group">
+                    <input type="password" placeholder="Password" name="password" class="form-control">
+                    
+                </div>
+                <div class="form-group">
+                    <button class="btn btn-primary form-control">Login</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    </section>
+
+<%- include('footer') -%>

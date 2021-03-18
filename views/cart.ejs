@@ -1,0 +1,114 @@
+<%- include('header') -%>         
+<section id="mycart" class="text-center">
+<div class="container">
+    <% if(products){ %> 
+        <table class="table table-dark table-borderless table-hover table-sm">
+                        <thead>
+                            <tr>
+                                <div class="row my-auto">
+                                    <div class="col-3">
+                                       <th scope="col"><h3>Products</h3></th>
+                                    </div>
+                                    <div class="col-3">
+                                        <th scope="col"><h3>Quantity</h3></th>
+                                    </div>                
+                                    <div class="col-3">
+                                        <th scope="col"><h3>Price<span><h6>(per product)</h6></span></h3></th>
+                                    </div>      
+                                    <div class="col-3">
+                                        <th scope="col"><h3>Actions</h3></th>
+                                    </div>          
+                                </div>
+                                
+                
+                            </tr>
+                        </thead>
+                    <div class="row">
+                        <tbody>
+                            <% products.forEach(function(product){ %>
+                            <tr>
+                                
+                                    <div class="col-3">
+                                       <td> <img src="<%= product.item.image %>" alt="" class="img-fluid cartImg">
+                                        <h5><%= product.item.name %></h5></td>
+                                    </div>
+                                    <div class="col-3">
+                                        <td class=" align-middle"> <h3 class=""><%= product.qty %></h3></td>
+                                    </div>                
+                                    <div class="col-3">
+                                        <td class="align-middle"><h3 class=""><%= product.item.price %></h3></td>
+                                    </div>
+                                    <div class="col-3">
+                                        <td class=" align-middle"><h6><a href="/add/<%= product.item._id %>">Add Quantity <i class="fas fa-plus"></i></a></h6>
+                                        <h6><a href="/reduce/<%= product.item._id %>">Decrease Quantity <i class="fas fa-minus"></i></a></h6>
+                                        <h6><a href="/remove/<%= product.item._id %>">Remove <i class="fas fa-trash"></i></a></h6>
+                                    </td>
+                                    </div>
+                                
+                            </tr>
+                            <% }) %>
+                            <div class="row">
+                                <tr>
+                                    <div class="col-3">
+                                        <td></td>
+                                    </div>
+                                    <div class="col-3">
+                                        <td></td>
+                                    </div>
+                                    <div class="col-3">
+                                       <td class="align-middle"> <h3>Total Price</h3></td>
+                                    </div>
+                                    <div class="col-3">
+                                        <td class="align-middle"><h3><%= totalPrice %></h3></td>
+                                    </div>
+                                </tr>
+                                
+                            </div>
+                            
+                            <div class="row">
+                                <tr>
+                                    <div class="col-3"><td></td></div>
+                                    <div class="col-3"><td></td></div>
+                                    <div class="col-3"><td></td></div>
+                                    <div class="col-3"><td>
+                                        <form action="/charge" method="POST">
+                                            <script
+                                              src="//checkout.stripe.com/v2/checkout.js"
+                                              class="stripe-button"
+                                              data-key="pk_test_51ISkEYIt0zrohrePWhCcQJnjdyDIAu6s5fhYKTjAItyj3OUe3ahtlTnq0ne9jdYW4p1OxglAvyHAwzC9EIsd0kcR00Y4pdalgy"
+                                              data-amount= "<%= totalPrice * 100 %>"
+                                              data-currency = "inr"
+                                              data-name="E-Commerce" 
+                                              data-description="Online Store"
+                                              data-image="https://stripe.com/img/documentation/checkout/marketplace.png"
+                                              data-locale ="auto" >
+
+                                            </script>
+                                            </form>
+                                    </td></div>
+                                </tr>
+                                
+                            </div>
+                            
+                        </tbody>
+                    
+                </div>
+            </table>                
+                <% }else{ %>
+    
+            </div>
+        </div>   
+        
+            
+    <div class="mt-5">
+    
+        <h1>No Items Here</h1>
+    
+    </div>  
+<% } %>
+</div>
+
+</section>
+
+
+<%- include("footer") -%>

@@ -1,0 +1,40 @@
+<%- include('header') -%>
+
+<section id="signup">
+
+    <div class="container mt-5">
+        <div class="text-center">
+
+            <h1>Create a Free Account</h1>
+        </div>
+
+        <div style="margin: 25px auto; width: 40%;">
+
+            <form action="/customer/signup" method="POST">
+
+                <div class="form-group">
+                    <input type="text" placeholder="First name" name="firstName" class="form-control">
+                </div>
+                <div class="form-group">
+                    <input type="text" placeholder="Last name" name="lastName" class="form-control">
+                </div>
+
+                
+                <div class="form-group">
+                    <input type="email" placeholder="Enter Your E-mail" name="email" class="form-control">
+                </div>
+                
+                                
+                
+                <div class="form-group">
+                    <input type="password" placeholder="Create a Password" name="password" class="form-control">
+                </div>
+                <div class="form-group">
+                    <button class="btn btn-primary form-control">Signup</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    </section>
+    <%- include('footer') -%>
