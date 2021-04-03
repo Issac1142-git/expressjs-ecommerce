@@ -11,6 +11,7 @@ background: linear-gradient(to right, #E9E4F0, #D3CCE3); /* W3C, IE 10+/ Edge, F
 
 }
 
+
 /* admin login and signup route styles  */
 #adminlogin{
     margin-top: 20vh;
@@ -151,9 +152,7 @@ background: linear-gradient(to right, #E9E4F0, #D3CCE3); /* W3C, IE 10+/ Edge, F
 
 /* checkout page */
 #checkout{
-    
     margin-top: 5em;
     margin-bottom: 5em;
 }
-
 

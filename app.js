@@ -15,7 +15,7 @@ const Order = require("./models/order");
 const middleware = require("./middleware/index");
 const { json } = require("express");
 
-mongoose.connect("mongodb://localhost:27017/ecommercev10", {useNewUrlParser: true, useUnifiedTopology: true});
+mongoose.connect("mongodb://localhost:27017/ecommercev15", {useNewUrlParser: true, useUnifiedTopology: true});
 
 //express configuration
 app.set("view engine", "ejs");
@@ -114,6 +114,9 @@ app.post("/customer/login", async function(req, res){
                     req.session.user = user;
                     res.redirect("/customer")
                 }
+            }else{
+                console.log("E-mail not found! Please signup");
+                res.redirect("/customer/signup");
             }
             
         }
@@ -247,6 +250,16 @@ app.get("/customer/myorder", function(req, res){
             })
             res.render("myorder", {orders: orders });
         }                
+    })
+})
+
+//search product from db
+app.post("/search", function(req, res){
+    console.log(req.body);
+    Product.find({name: req.body.product}, function(err, product){
+        if(!err){
+            console.log(product);
+        }
     })
 })
 
