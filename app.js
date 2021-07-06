@@ -15,7 +15,7 @@ const Order = require("./models/order");
 const middleware = require("./middleware/index");
 const { json } = require("express");
 
-mongoose.connect("mongodb://localhost:27017/ecommercev15", { useNewUrlParser: true, useUnifiedTopology: true });
+mongoose.connect("mongodb://localhost:27017/ecommerce", { useNewUrlParser: true, useUnifiedTopology: true });
 
 //express configuration
 app.set("view engine", "ejs");
