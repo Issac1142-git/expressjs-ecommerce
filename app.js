@@ -41,10 +41,10 @@ app.use(function (req, res, next) {
 });
 
 //stripe keys
-const publishableKey = "pk_test_51ISkEYIt0zrohrePWhCcQJnjdyDIAu6s5fhYKTjAItyj3OUe3ahtlTnq0ne9jdYW4p1OxglAvyHAwzC9EIsd0kcR00Y4pdalgy";
-const secretKey = "sk_test_51ISkEYIt0zrohrePhpHW7sDleeihGioNEIKDEaHAS0Lu8DcDLFkTdYsIyODlADDbdw57TB0eZOR5PuomaWzHbNhu00mCn5nEJs";
+const publishableKey = "/** add keys **//";
+const secretKey = "/** add keys **//";
 
-const stripe = require('stripe')('sk_test_51ISkEYIt0zrohrePhpHW7sDleeihGioNEIKDEaHAS0Lu8DcDLFkTdYsIyODlADDbdw57TB0eZOR5PuomaWzHbNhu00mCn5nEJs');
+const stripe = require('stripe')('/** add keys **//');
 
 //root route
 app.get("/", function (req, res) {
