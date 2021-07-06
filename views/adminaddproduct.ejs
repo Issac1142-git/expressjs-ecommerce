@@ -1,30 +1,31 @@
 <%- include("adminheader") %>
-<section id="addproduct">
-<div class="container">
-    <div class="text-center mt-4"> 
-        
-        <h1>Add a Product</h1>
-    </div>
-    <div style="margin: 25px auto; width: 40%;">
-    <form action="/seller/<%= currentAdmin._id %>/addproduct" method="POST">
-        <div class="form-group">
-            <input type="text" placeholder="Product name" class="form-control" name="name">
+    <section id="addproduct">
+        <div class="container">
+            <div class="text-center mt-4">
+
+                <h1>Add a Product</h1>
+            </div>
+            <div style="margin: 25px auto; width: 40%;">
+                <form action="/seller/<%= currentAdmin._id %>/addproduct" method="POST">
+                    <div class="form-group">
+                        <input type="text" placeholder="Product name" class="form-control" name="name">
+                    </div>
+                    <div class="form-group">
+                        <input type="text" id="" placeholder="Product Image" class="form-control" name="image">
+                    </div>
+                    <div class="form-group">
+                        <input type="number" min="1" step="1" name="price" id="" class="form-control"
+                            placeholder="Product Price">
+                    </div>
+                    <div class="form-group">
+                        <textarea name="description" class="form-control" placeholder="Add a description"></textarea>
+                    </div>
+                    <div class="form-group">
+                        <button class="form-control btn btn-info">Add Product</button>
+                    </div>
+            </div>
+
         </div>
-        <div class="form-group">
-            <input type="text" id="" placeholder="Product Image" class="form-control" name="image">
-        </div>
-        <div class="form-group">
-            <input type="number" min="1" step="1" name="price" id="" class="form-control" placeholder="Product Price">
-        </div>
-        <div class="form-group">
-            <textarea name="description" class="form-control" placeholder="Add a description"></textarea>
-        </div>
-        <div class="form-group">
-            <button class="form-control btn btn-info">Add Product</button>
-        </div>
-    </div>
-    
-</div>
-</form>
-</section>
-<%- include("./footer") %>
+        </form>
+    </section>
+    <%- include("./footer") %>

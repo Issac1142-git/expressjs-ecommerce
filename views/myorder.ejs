@@ -1,40 +1,44 @@
 <%- include("header") -%>
 
-<section id="myorder" style="margin-top: 10vh; margin-bottom: 10vh;">
-  <div class="row">
-    <div class="col-12">
-<% if(orders.length >= 1){ %>
-      <div class="container">
-        <h1 class="text-center">My Orders</h1>
- <% orders.forEach(function(order){ %>
+  <section id="myorder" style="margin-top: 10vh; margin-bottom: 10vh;">
+    <div class="row">
+      <div class="col-12">
+        <% if(orders.length>= 1){ %>
+          <div class="container">
+            <h1 class="text-center">My Orders</h1>
+            <% orders.forEach(function(order){ %>
 
-        <div class="card mb-3 bg-info" style="width: 50%; margin: auto">
-          <ul class="list-group list-group-flush">
-  <% order.items.forEach(function(i){ %>
+              <div class="card mb-3 bg-info" style="width: 50%; margin: auto">
+                <ul class="list-group list-group-flush">
+                  <% order.items.forEach(function(i){ %>
 
-      <li class="list-group-item bg-info"><%= i.item.name %><span class="badge badge-primary float-right"><%= i.qty %></span></li>
-            
-  <% }) %> 
-          </ul>
-          <div class="card-footer">
-            <strong> Total Price <%= order.cart.totalPrice %></strong>
+                    <li class="list-group-item bg-info">
+                      <%= i.item.name %><span class="badge badge-primary float-right">
+                          <%= i.qty %>
+                        </span>
+                    </li>
+
+                    <% }) %>
+                </ul>
+                <div class="card-footer">
+                  <strong> Total Price <%= order.cart.totalPrice %></strong>
+                </div>
+              </div>
+              <% }) %>
+
           </div>
-        </div>
-  <% }) %> 
-
+          <% }else{ %>
+            <h1 class="text-center">No Orders Here</h1>
+            <% } %>
       </div>
-      <% }else{ %>
-        <h1 class="text-center">No Orders Here</h1>
-      <% } %>
     </div>
-</div>
-</section>
+  </section>
 
-<%- include("footer") -%>
+  <%- include("footer") -%>
 
 
-<!-- reference for logic -->
-<!-- <% orders.forEach(function(order){ %>
+    <!-- reference for logic -->
+    <!-- <% orders.forEach(function(order){ %>
   <% order.items.forEach(function(i){ %>
       <p>product name <%= i.item.name %></p>
       <p>quantity <%= i.qty %></p>
@@ -42,4 +46,4 @@
   <% }) %>
   <p>totalPrice <%= order.cart.totalPrice %></p>
   <hr>
-  <% }) %> -->
+  <% }) %> -->`

@@ -2,7 +2,7 @@ const mongoose = require("mongoose");
 const { default: validator } = require("validator");
 const bcrypt = require("bcrypt");
 
-const userSchema  = new mongoose.Schema({
+const userSchema = new mongoose.Schema({
     firstName: {
         type: String,
         required: true,
@@ -18,8 +18,8 @@ const userSchema  = new mongoose.Schema({
         required: true,
         trim: true,
         unique: true,
-        validate(value){
-            if(!validator.isEmail(value)){
+        validate(value) {
+            if (!validator.isEmail(value)) {
                 throw new Error("Invalid Email")
             }
         }
@@ -30,11 +30,11 @@ const userSchema  = new mongoose.Schema({
         minlength: 8,
         trim: true
     }
-    
+
 });
 
-userSchema.pre("save", async function(next){
-    if(this.password && this.isModified("password")){
+userSchema.pre("save", async function (next) {
+    if (this.password && this.isModified("password")) {
         this.password = await bcrypt.hash(this.password, 10);
     }
     next();
